@@ -1,0 +1,132 @@
+/* Fonts */
+@font-face {
+    font-family: RDR2;
+    src: url(../fonts/RDR_Lino_Regular.ttf);
+}
+
+@font-face {
+    font-family: RDR2-DESC;
+    src: url(../fonts/Hapna_Slab_Serif.ttf);
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Watermark */
+.watermark {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.watermark #serverLogo {
+    background-image: url('../img/logo.png');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    width: 55px;
+    height: 55px;
+}
+
+.watermark #serverInfo {
+    margin-right: 10px;
+    text-align: right;
+}
+
+.watermark #serverName,
+.watermark #serverDesc {
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+    font-family: RDR2;
+}
+
+.watermark #serverName {
+    font-size: 40px;
+    margin-bottom: -5px;
+}
+
+.watermark #serverDesc {
+    font-size: 15px;
+}
+
+/* Player Info */
+.playerInfo,
+.playerid,
+.playercurrency {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Player ID */
+.playerid {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-left: 10px;
+}
+
+.playerid #id {
+    color: white;
+    text-shadow: 2px 2px 2px #000000;
+    font-family: RDR2;
+    font-size: 16px;
+    padding-right: 5px
+}
+
+/* Player Currency */
+.playercurrency #rol,
+.playercurrency #gold,
+.playercurrency #money {
+    text-shadow: 2px 2px 2px #000000;
+    font-family: RDR2;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.playercurrency #rol::before,
+.playercurrency #gold::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.playercurrency #rol::before {
+    background-image: url('../img/rol.png');
+}
+
+.playercurrency #gold::before {
+    background-image: url('../img/gold.png');
+    vertical-align: text-top;
+}
+
+.playercurrency .cents {
+    font-size: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-70%);
+    display: inline-block;
+    border-bottom: 1px solid;
+    margin-left: 4px;
+    line-height: 1;
+}
+
+.playercurrency #rol {
+    color: #00aeef;
+}
+
+.playercurrency #gold {
+    color: #ffd700;
+}
+
+.playercurrency #money {
+    color: #ffffff;
+}
