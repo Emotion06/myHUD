@@ -11,7 +11,7 @@ To install myHUD:
   - `myHUD`
 - Add this ensure in your server.cfg
   - `ensure myHUD`
-- Now you can configure and translate the script as you like
+- Now you can configure the script as you like
   - `config.lua`
 - At the end
   - Restart the server
