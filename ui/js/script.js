@@ -1,14 +1,15 @@
 $(document).ready(function() {
+    const $hud = $('#hud');
+    const $playerCurrency = $('.playerCurrency');
     const $money = $('#money');
     const $gold = $('#gold');
     const $rol = $('#rol');
-    const $id = $('#id');
     const $serverName = $('#serverName');
     const $serverDesc = $('#serverDesc');
     const $serverLogo = $('#serverLogo');
-    const $hud = $('#hud');
-    const $playerCurrency = $('.playercurrency');
-    const $playerId = $('.playerid');
+    const $playerStats = $('.playerStats');
+    const $id = $('#id');
+    const $temp = $('#temp');
 
     function formatCurrency(value) {
         const ints = Math.trunc(value);
@@ -37,12 +38,16 @@ $(document).ready(function() {
             if (data.id !== undefined) {
                 $id.html(`ID ${data.id}`);
             }
+            if (data.temp !== undefined) {
+                $temp.html(`${data.temp}°C`);
+            }
 
             $playerCurrency.find('#money').toggle(data.cfgMoney);
             $playerCurrency.find('#gold').toggle(data.cfgGold);
             $playerCurrency.find('#rol').toggle(data.cfgRol);
-            $playerId.toggle(data.cfgID);
-            
+            $playerStats.find('#id').toggle(data.cfgID);
+            $playerStats.find('#temp').toggle(data.cfgTemp);
+
             $serverName.toggle(data.cfgName);
             $serverDesc.toggle(data.cfgDesc);
             $serverLogo.toggle(data.cfgLogo);

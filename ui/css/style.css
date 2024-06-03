@@ -38,8 +38,8 @@
 
 .watermark #serverName,
 .watermark #serverDesc {
-    color: white;
-    text-shadow: 2px 2px 2px #000000;
+    color: #e3e3e3;
+    text-shadow: 2px 2px 2px #000009;
     font-family: RDR2;
 }
 
@@ -54,42 +54,45 @@
 
 /* Player Info */
 .playerInfo,
-.playerid,
-.playercurrency {
+.playerCurrency {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
 
-/* Player ID */
-.playerid {
+/* Player Stats */
+.playerStats {
     position: fixed;
     bottom: 0;
     left: 0;
     margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.playerid #id {
-    color: white;
-    text-shadow: 2px 2px 2px #000000;
+.playerStats p {
+    color: #e3e3e3;
+    text-shadow: 2px 2px 2px #000009;
     font-family: RDR2;
     font-size: 16px;
-    padding-right: 5px
+    margin: 2px;
+    padding-right: 5px;
 }
 
 /* Player Currency */
-.playercurrency #rol,
-.playercurrency #gold,
-.playercurrency #money {
-    text-shadow: 2px 2px 2px #000000;
+.playerCurrency #rol,
+.playerCurrency #gold,
+.playerCurrency #money {
+    text-shadow: 2px 2px 2px #000009;
     font-family: RDR2;
     font-size: 30px;
     margin-right: 10px;
 }
 
-.playercurrency #rol::before,
-.playercurrency #gold::before {
+.playerCurrency #rol::before,
+.playerCurrency #gold::before {
     content: '';
     display: inline-block;
     width: 20px;
@@ -99,16 +102,16 @@
     margin-right: 8px;
 }
 
-.playercurrency #rol::before {
+.playerCurrency #rol::before {
     background-image: url('../img/rol.png');
 }
 
-.playercurrency #gold::before {
+.playerCurrency #gold::before {
     background-image: url('../img/gold.png');
     vertical-align: text-top;
 }
 
-.playercurrency .cents {
+.playerCurrency .cents {
     font-size: 50%;
     position: relative;
     top: 50%;
@@ -119,14 +122,14 @@
     line-height: 1;
 }
 
-.playercurrency #rol {
+.playerCurrency #rol {
     color: #00aeef;
 }
 
-.playercurrency #gold {
+.playerCurrency #gold {
     color: #ffd700;
 }
 
-.playercurrency #money {
-    color: #ffffff;
+.playerCurrency #money {
+    color: #e3e3e3;
 }
