@@ -1,8 +1,6 @@
 # 💡 myHUD
 Documentation relating to the [myHUD](https://github.com/Emotion06/myHUD).
 
-![image](https://cdn.discordapp.com/attachments/850400157237248020/1242203929857757336/Screenshot_2024-05-02_161957.png?ex=66558dcf&is=66543c4f&hm=0d2e40bc99c5f045b88bcd46c94263c45ab3c2c4b3340dc2160204c7599b4a4f&)
-
 ## 1. Installation
 myHUD works only with VORP. 
 
@@ -31,12 +29,13 @@ Config.Setup = {
     gold = true,
     rol = true,
     id = true,
+    temperature = true,
     logo = true,
     name = true,
     desc = true,
     commands = {
         toggle = 'toggleHUD',
-        dev  = 'updateHUD'
+        dev  = 'updateHUD',
     },
 }
 ```
